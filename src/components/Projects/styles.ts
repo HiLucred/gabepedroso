@@ -16,9 +16,9 @@ export const SwipeBox = styled("div", {
   },
 
   i: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     color: "$pink",
   },
 });
@@ -33,8 +33,8 @@ export const Container = styled("section", {
 
 export const Project = styled("div", {
   img: {
-    borderRadius: 8
-  }
+    borderRadius: 8,
+  },
 });
 
 export const Info = styled("div", {
@@ -43,7 +43,7 @@ export const Info = styled("div", {
   position: "relative",
   borderRadius: 11,
   backgroundColor: "$tertiary",
-  overflow: 'hidden',
+  overflow: "hidden",
 
   h2: {
     color: "$primary",
@@ -71,20 +71,26 @@ export const Links = styled("span", {
   a: {
     marginLeft: "0.5rem",
     color: "$secondary",
+    transition: "0.2s",
+
+    "&:hover": {
+      color: "$pink",
+      transition: "0.2s",
+    },
   },
 });
 
-export const TechnologysBox = styled('div', {
-  width: '100%',
-  marginTop: '0.700rem',
-  
-  display: 'flex',
-  gap: '0.5rem',
-  flexWrap: 'wrap',
+export const TechnologysBox = styled("div", {
+  width: "100%",
+  marginTop: "0.700rem",
+
+  display: "flex",
+  gap: "0.5rem",
+  flexWrap: "wrap",
 
   span: {
-    color: '$link',
-    fontSize: '0.875rem',
-    fontWeight: 400
-  }
-})
+    color: "$link",
+    fontSize: "0.875rem",
+    fontWeight: 400,
+  },
+});

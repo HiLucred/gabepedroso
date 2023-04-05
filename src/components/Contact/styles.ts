@@ -3,6 +3,7 @@ import { styled } from "@/styles";
 export const Container = styled("section", {
   width: "100%",
   marginTop: "6.5rem",
+  marginBottom: "3rem",
   backgroundColor: "$tertiary",
   borderRadius: 11,
   padding: "4.75rem 3.5rem",

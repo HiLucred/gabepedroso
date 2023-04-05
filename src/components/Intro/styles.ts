@@ -35,5 +35,11 @@ export const Links = styled("div", {
 
   a: {
     color: "$white",
+    transition: "0.2s",
+
+    "&:hover": {
+      color: "$pink",
+      transition: "0.2s",
+    },
   },
 });

@@ -23,8 +23,8 @@ export interface IProjects {
 }
 
 export interface IIssues {
-  title: string
-  body: string
+  title: string;
+  body: string;
 }
 
 interface HomeProps {
@@ -38,7 +38,7 @@ export default function Home({ user, projects, issues }: HomeProps) {
     <>
       <NavBar />
       <Content>
-        <Intro name={user.name} bio={user.bio} avatar_url={user.avatar_url} />
+        <Intro data={user} />
 
         <main>
           <About />
@@ -56,13 +56,14 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const user = await gitHub.get(`/users/${username}`);
   const projects = await gitHub.get(`/users/${username}/repos`);
-  const issues = await gitHub.get(`repos/${username}/GitHub-Blog-REACT/issues`);
+  const issues = await gitHub.get(`repos/${username}/gabepedroso/issues`);
 
   return {
     props: {
       user: user.data,
       projects: projects.data,
-      issues: issues.data
+      issues: issues.data,
     },
+    revalidate: 60 * 60 * 24 * 7, // 7 Days
   };
 };

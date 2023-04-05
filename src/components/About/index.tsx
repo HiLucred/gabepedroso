@@ -2,7 +2,7 @@ import { Container } from "./styles";
 
 export function About() {
   return (
-    <Container>
+    <Container id="about">
       <p>
         I'm a UI developer based in Barcelona. I'm interested in dev rel, design
         systems, web3, user/dev experience and under engineering.

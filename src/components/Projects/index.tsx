@@ -46,7 +46,7 @@ export function Projects({ data }: ProjectsProps) {
         </i>
       </SwipeBox>
 
-      <Container ref={ref} className="keen-slider">
+      <Container id="projects" ref={ref} className="keen-slider">
         {projects.map((item) => {
           if (item.topics.length === 0) {
             return;
@@ -55,7 +55,7 @@ export function Projects({ data }: ProjectsProps) {
           return (
             <Project className="keen-slider__slide" key={item.name}>
               <img
-                src={`https://raw.githubusercontent.com/hilucred/${item.name}/main/public/cover.jpg`}
+                src={`https://raw.githubusercontent.com/hilucred/${item.name}/main/public/cover.png`}
                 alt=""
               />
 
@@ -64,7 +64,7 @@ export function Projects({ data }: ProjectsProps) {
                   <Link href={item.html_url} prefetch={false}>
                     <GitHubLogoIcon />
                   </Link>
-                  
+
                   <Link
                     href={item.homepage !== null ? item.homepage : ""}
                     prefetch={false}

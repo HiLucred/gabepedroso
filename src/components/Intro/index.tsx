@@ -1,4 +1,3 @@
-import { IUser } from "@/pages";
 import Image from "next/image";
 import { Container, Links } from "./styles";
 import {
@@ -8,24 +7,41 @@ import {
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-export function Intro({ name, bio, avatar_url }: IUser) {
+interface IntroProps {
+  data: {
+    name: string;
+    bio: string;
+    avatar_url: string;
+  };
+}
+
+export function Intro({ data }: IntroProps) {
   return (
     <Container>
-      <Image src={avatar_url} alt={""} width={156} height={156} />
-      <h1>{name}</h1>
-      <p>{bio}</p>
+      <Image src={data.avatar_url} alt={""} width={156} height={156} />
+      <h1>{data.name}</h1>
+      <p>{data.bio}</p>
 
       <Links>
-        <Link target="_blank" href={"https://www.instagram.com/luscanoig/"}>
+        <Link
+          target="_blank"
+          href={"https://www.instagram.com/luscanoig/"}
+          title="Instagram"
+        >
           <InstagramLogoIcon />
         </Link>
         <Link
           target="_blank"
           href={"https://www.linkedin.com/in/gabriel-pedroso-/"}
+          title="LinkedIn"
         >
           <LinkedInLogoIcon />
         </Link>
-        <Link target="_blank" href={"https://github.com/HiLucred"}>
+        <Link
+          target="_blank"
+          href={"https://github.com/HiLucred"}
+          title="GitHub"
+        >
           <GitHubLogoIcon />
         </Link>
       </Links>

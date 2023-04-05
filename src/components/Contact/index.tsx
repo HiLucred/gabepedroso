@@ -3,6 +3,7 @@ import { Button, Container, ErrorMessage, InputBox } from "./styles";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
+import { useRef } from "react";
 
 const contactFormSchema = z.object({
   name: z.string().min(3, { message: "Insira um nome valido." }),
@@ -39,7 +40,7 @@ export function Contact() {
   }
 
   return (
-    <Container>
+    <Container id="contact">
       <h2>Vamos conversar?</h2>
       <p>
         Desenvolvedor web à disposição! Entre em contato para discutir seu
