@@ -4,17 +4,17 @@ export function About() {
   return (
     <Container id="about">
       <p>
-        I'm a UI developer based in Barcelona. I'm interested in dev rel, design
-        systems, web3, user/dev experience and under engineering.
+        Sou um programador web residente em Curitiba, apaixonado por tecnologia
+        e movido pelo desafio de criar soluções inovadoras e interativas.
         <br></br>
         <br></br>
-        I'm currently working at Raycast as a DX Engineer to grow its developer
-        community. Previously, I worked at Rainbow, where I focused on
-        RainbowKit.
+        Meu objetivo é desenvolver aplicações acessíveis para todos,
+        especialmente aquelas que ajudam a superar barreiras e dificuldades.
         <br></br>
         <br></br>
-        Before that, I co-created Radix, designed the Stitches API and led their
-        developer community.
+        Com um olhar atento para criar interfaces agradáveis de se ver, adoro
+        trabalhar no front-end e encontrar maneiras de torná-las mais intuitivas
+        e fáceis de usar.
       </p>
     </Container>
   );

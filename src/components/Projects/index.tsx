@@ -14,6 +14,7 @@ import {
   SwipeBox,
   TechnologysBox,
 } from "./styles";
+import Image from "next/image";
 
 interface ProjectsProps {
   data: {
@@ -54,20 +55,23 @@ export function Projects({ data }: ProjectsProps) {
 
           return (
             <Project className="keen-slider__slide" key={item.name}>
-              <img
+              <Image
                 src={`https://raw.githubusercontent.com/hilucred/${item.name}/main/public/cover.png`}
                 alt=""
+                width={375}
+                height={243}
               />
 
               <Info>
                 <Links>
-                  <Link href={item.html_url} prefetch={false}>
+                  <Link href={item.html_url} prefetch={false} title="GitHub">
                     <GitHubLogoIcon />
                   </Link>
 
                   <Link
-                    href={item.homepage !== null ? item.homepage : ""}
+                    href={item.homepage !== null ? item.homepage : "#"}
                     prefetch={false}
+                    title="Deploy"
                   >
                     <Link2Icon />
                   </Link>

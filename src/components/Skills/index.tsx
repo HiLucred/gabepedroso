@@ -12,8 +12,11 @@ interface SkillsProps {
 }
 
 export function Skills({ data }: SkillsProps) {
+  const initialDescription = data[9].body.toString(); // Corrigir isso
+
   const [skillCurrent, setSkillCurrent] = useState("React");
-  const [skillDescriptionCurrent, setSkillDescriptionCurrent] = useState("");
+  const [skillDescriptionCurrent, setSkillDescriptionCurrent] =
+    useState(initialDescription);
 
   function handleSetCurrentSkill(skill: string, skillDescription: string) {
     setSkillCurrent(skill);
@@ -49,7 +52,7 @@ export function Skills({ data }: SkillsProps) {
 
         <InfoBox>
           <h2>{skillCurrent}</h2>
-          <ReactMarkdown children={skillDescriptionCurrent} />
+          <ReactMarkdown>{skillDescriptionCurrent}</ReactMarkdown>
         </InfoBox>
       </Container>
     </>
