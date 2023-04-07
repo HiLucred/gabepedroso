@@ -1,7 +1,7 @@
 import { styled } from "@/styles";
 
 export const Container = styled("section", {
-  width: "100%",
+  width: "98%",
   marginTop: "6.5rem",
   marginBottom: "3rem",
   backgroundColor: "$tertiary",
@@ -44,7 +44,7 @@ export const InputBox = styled("form", {
       height: "5rem",
 
       paddingTop: "1rem",
-      fontSize: '0.8rem',
+      fontSize: "0.8rem",
     },
 
     "input, textarea": {

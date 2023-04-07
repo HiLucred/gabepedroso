@@ -32,6 +32,21 @@ export function Projects({ data }: ProjectsProps) {
       perView: 2,
       spacing: 10,
     },
+
+    breakpoints: {
+      "(max-width: 500px)": {
+        slides: {
+          perView: 1.5,
+          spacing: 10,
+        },
+      },
+
+      "(max-width: 400px)": {
+        slides: {
+          perView: 1,
+        },
+      },
+    },
   });
 
   const projects = data.filter((item) => {

@@ -1,6 +1,6 @@
 import { globalCss } from ".";
 
-export const globalStyle = globalCss({
+export const globalStyles = globalCss({
   "*": {
     margin: 0,
     padding: 0,
@@ -10,6 +10,7 @@ export const globalStyle = globalCss({
   body: {
     backgroundColor: "$background",
     "-webkit-font-smoothing": "antialiased",
+    boxSizing: "border-box",
   },
 
   "body, input, textarea, button": {

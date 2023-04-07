@@ -1,14 +1,21 @@
-import { queryClient } from '@/lib/react-query'
-import { globalStyle } from '@/styles/global'
-import { QueryClientProvider } from '@tanstack/react-query'
-import type { AppProps } from 'next/app'
+import { globalStyles } from "@/styles/global";
+import type { AppProps } from "next/app";
+import { DefaultSeo } from "next-seo";
 
-globalStyle()
+globalStyles();
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <QueryClientProvider client={queryClient}>
+    <>
+      <DefaultSeo
+        openGraph={{
+          type: "website",
+          locale: "pt_BR",
+          // url: "https://ignite-call.rocketseat.com.br",
+          siteName: "Gabe Pedroso",
+        }}
+      />
       <Component {...pageProps} />
-    </QueryClientProvider>
-  )
+    </>
+  );
 }

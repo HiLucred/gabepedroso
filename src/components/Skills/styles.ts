@@ -2,13 +2,17 @@ import { styled } from "@/styles";
 
 export const Container = styled("section", {
   display: "flex",
+  width: "98%",
+  gap: "3rem",
 
-  gap: "4rem",
+  "@media (max-width: 768px)": {
+    flexWrap: "wrap",
+  },
 });
 
 export const SkillsBox = styled("div", {
   display: "flex",
-  alignItems: "center",
+  width: "100%",
   gap: "0.5rem",
 
   marginTop: "6.5rem",
@@ -24,12 +28,25 @@ export const SkillsBox = styled("div", {
     alignItems: "center",
     color: "$pink",
   },
+
+  "@media (max-width: 768px)": {
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 export const SkillsList = styled("div", {
   ul: {
     borderLeft: "6px solid $pink",
-    paddingLeft: "1.25rem",
+
+    "@media (max-width: 768px)": {
+      display: "flex",
+      flexWrap: "wrap",
+      borderLeft: "none",
+
+      justifyContent: "center",
+      alignItems: " center",
+    },
   },
 
   li: {

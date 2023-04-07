@@ -61,6 +61,14 @@ export const Info = styled("div", {
     fontSize: "1rem",
     fontWeight: 400,
   },
+
+  "@media (max-width: 600px)": {
+    height: "4rem",
+
+    p: {
+      opacity: 0,
+    },
+  },
 });
 
 export const Links = styled("span", {
