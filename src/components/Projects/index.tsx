@@ -30,7 +30,7 @@ export function Projects({ data }: ProjectsProps) {
   const [ref] = useKeenSlider<HTMLDivElement>({
     slides: {
       perView: 2,
-      spacing: 10,
+      spacing: 6,
     },
 
     breakpoints: {

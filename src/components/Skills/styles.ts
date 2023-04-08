@@ -50,6 +50,7 @@ export const SkillsList = styled("div", {
   },
 
   li: {
+    width: '12rem',
     listStyleType: "none",
     color: "$primary",
     padding: "1rem",

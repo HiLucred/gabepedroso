@@ -38,6 +38,7 @@ export const Project = styled("div", {
 });
 
 export const Info = styled("div", {
+  maxWidth: 375,
   height: "6.5rem",
   padding: "1rem",
   position: "relative",
