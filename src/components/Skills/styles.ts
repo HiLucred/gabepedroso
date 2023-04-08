@@ -1,86 +1,38 @@
 import { styled } from "@/styles";
+import * as Tabs from "@radix-ui/react-tabs";
 
-export const Container = styled("section", {
+export const TabsRoot = styled(Tabs.Root, {
   display: "flex",
-  width: "98%",
-  gap: "3rem",
-
-  "@media (max-width: 768px)": {
-    flexWrap: "wrap",
-  },
-  position: "relative",
+  gap: '2rem',
+  marginTop: "5rem",
 });
 
-export const SkillsBox = styled("div", {
+export const TabsList = styled(Tabs.List, {
   display: "flex",
-  width: "100%",
-  gap: "0.5rem",
+  flexDirection: "column",
+  borderLeft: "2px solid $pink",
+});
 
-  marginTop: "6.5rem",
-  marginBottom: "1rem",
-  span: {
-    color: "$link",
-    fontSize: "0.875rem",
-  },
+export const TabsTrigger = styled(Tabs.Trigger, {
+  background: "transparent",
+  color: "$primary",
+  border: "none",
+  padding: "1rem",
 
-  i: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    color: "$pink",
-  },
-
-  "@media (max-width: 768px)": {
-    justifyContent: "center",
-    alignItems: "center",
+  '&[data-state="active"]': {
+    backgroundColor: "$tertiary",
   },
 });
 
-export const SkillsList = styled("div", {
-  ul: {
-    borderLeft: "6px solid $pink",
-
-    "@media (max-width: 768px)": {
-      display: "flex",
-      flexWrap: "wrap",
-      borderLeft: "none",
-
-      justifyContent: "center",
-      alignItems: " center",
-    },
-  },
-
-  li: {
-    width: "12rem",
-    listStyleType: "none",
-    color: "$primary",
-    padding: "1rem",
-    height: "3rem",
-
-    "&:hover": {
-      backgroundColor: "$tertiary",
-    },
-  },
-});
-
-export const InfoBox = styled("div", {
+export const TabsContent = styled(Tabs.TabsContent, {
   backgroundColor: "$tertiary",
   borderRadius: 11,
   padding: "1.25rem 2.5rem",
   height: "100%",
+  color: "$secondary",
 
   h2: {
     marginBottom: "2rem",
-    fontSize: "2rem",
     color: "$primary",
   },
-
-  p: {
-    marginBottom: "2rem",
-    color: "$secondary",
-  },
-
-  position: "absolute",
-  top: 0,
-  left: "10rem",
 });
