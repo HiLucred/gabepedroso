@@ -55,7 +55,7 @@ export const SkillsList = styled("div", {
     listStyleType: "none",
     color: "$primary",
     padding: "1rem",
-    height: "100%",
+    height: "3rem",
 
     "&:hover": {
       backgroundColor: "$tertiary",
