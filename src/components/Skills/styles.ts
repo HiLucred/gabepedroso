@@ -8,6 +8,7 @@ export const Container = styled("section", {
   "@media (max-width: 768px)": {
     flexWrap: "wrap",
   },
+  position: "relative",
 });
 
 export const SkillsBox = styled("div", {
@@ -50,7 +51,7 @@ export const SkillsList = styled("div", {
   },
 
   li: {
-    width: '12rem',
+    width: "12rem",
     listStyleType: "none",
     color: "$primary",
     padding: "1rem",
@@ -78,4 +79,8 @@ export const InfoBox = styled("div", {
     marginBottom: "2rem",
     color: "$secondary",
   },
+
+  position: "absolute",
+  top: 0,
+  left: '10rem',
 });
