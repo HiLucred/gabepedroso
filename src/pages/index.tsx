@@ -9,6 +9,7 @@ import { gitHub } from "@/lib/axios";
 import { Content } from "@/styles/pages/home/styles";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -48,6 +49,10 @@ export default function Home({ user, projects, issues }: HomeProps) {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <NextSeo
         title="Desenvolvedor Front-end | Gabriel Pedroso"
         description="Desenvolvedor front-end apaixonado por criar interfaces incríveis e interativas. "
