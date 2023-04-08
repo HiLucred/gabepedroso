@@ -82,5 +82,5 @@ export const InfoBox = styled("div", {
 
   position: "absolute",
   top: 0,
-  left: '10rem',
+  left: "10rem",
 });
