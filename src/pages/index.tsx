@@ -3,11 +3,14 @@ import { Contact } from "@/components/Contact";
 import { Intro } from "@/components/Intro";
 import { NavBar } from "@/components/NavBar";
 import { Projects } from "@/components/Projects";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { Skills } from "@/components/Skills";
 import { gitHub } from "@/lib/axios";
 import { Content } from "@/styles/pages/home/styles";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
+import { useEffect } from "react";
+import { animateScroll as scroll } from "react-scroll";
 
 export interface IUser {
   name: string;
@@ -35,13 +38,21 @@ interface HomeProps {
 }
 
 export default function Home({ user, projects, issues }: HomeProps) {
+  function handleScrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  useEffect(() => {
+    handleScrollToTop();
+  }, []);
+
   return (
     <>
       <NextSeo
         title="Desenvolvedor Front-end | Gabriel Pedroso"
         description="Desenvolvedor front-end apaixonado por criar interfaces incríveis e interativas. "
       />
-      
+
       <NavBar />
       <Content>
         <Intro data={user} />
@@ -52,6 +63,8 @@ export default function Home({ user, projects, issues }: HomeProps) {
           <Skills data={issues} />
           <Contact />
         </main>
+
+        <ScrollToTop scrollToTop={handleScrollToTop} />
       </Content>
     </>
   );

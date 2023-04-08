@@ -18,7 +18,7 @@ export function NavBar() {
   }
 
   return (
-    <Container>
+    <Container id="nav-bar">
       <HamburgerMenu>
         <button onClick={() => setIsSelected(true)}>
           <HamburgerMenuIcon color={`${pink}`} width={"5rem"} height={"5rem"} />

@@ -11,7 +11,6 @@ export default function App({ Component, pageProps }: AppProps) {
         openGraph={{
           type: "website",
           locale: "pt_BR",
-          // url: "https://ignite-call.rocketseat.com.br",
           siteName: "Gabe Pedroso",
         }}
       />

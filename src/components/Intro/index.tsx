@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Container, Links } from "./styles";
+import Link from "next/link";
 import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
   GitHubLogoIcon,
 } from "@radix-ui/react-icons";
-import Link from "next/link";
 
 interface IntroProps {
   data: {

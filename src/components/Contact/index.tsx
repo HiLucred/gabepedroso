@@ -3,7 +3,6 @@ import { Button, Container, ErrorMessage, InputBox } from "./styles";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
-import { useRef } from "react";
 
 const contactFormSchema = z.object({
   name: z.string().min(3, { message: "Insira um nome valido." }),

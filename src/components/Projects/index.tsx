@@ -1,6 +1,7 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRightIcon,
   GitHubLogoIcon,
@@ -14,7 +15,6 @@ import {
   SwipeBox,
   TechnologysBox,
 } from "./styles";
-import Image from "next/image";
 
 interface ProjectsProps {
   data: {
@@ -79,7 +79,12 @@ export function Projects({ data }: ProjectsProps) {
 
               <Info>
                 <Links>
-                  <Link href={item.html_url} prefetch={false} title="GitHub">
+                  <Link
+                    href={item.html_url}
+                    prefetch={false}
+                    title="GitHub"
+                    target="_blank"
+                  >
                     <GitHubLogoIcon />
                   </Link>
 
@@ -87,6 +92,7 @@ export function Projects({ data }: ProjectsProps) {
                     href={item.homepage !== null ? item.homepage : "#"}
                     prefetch={false}
                     title="Deploy"
+                    target="_blank"
                   >
                     <Link2Icon />
                   </Link>
