@@ -3,6 +3,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 
 export const Container = styled("section", {
   marginTop: "5rem",
+  marginBottom: '5rem',
 
   "@media(max-Width=822px)": {
     span: {
@@ -70,6 +71,7 @@ export const TabsContent = styled(Tabs.TabsContent, {
   height: "100%",
   color: "$secondary",
   fontSize: "0.875rem",
+  boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.1)",
 
   h2: {
     marginBottom: "2rem",

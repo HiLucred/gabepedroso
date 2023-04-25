@@ -8,6 +8,7 @@ import {
   TabsRoot,
   TabsTrigger,
 } from "./styles";
+import { SectionTitle } from "../SectionTitle";
 
 interface SkillsProps {
   data: {
@@ -21,9 +22,7 @@ export function Skills({ data }: SkillsProps) {
 
   return (
     <Container id="skills">
-      <span>
-        <h3>minhas habilidades</h3> <ArrowDownIcon color={`${colors.pink}`} />
-      </span>
+      <SectionTitle>HABILIDADES</SectionTitle>
 
       <TabsRoot defaultValue="React" orientation="vertical">
         <TabsList aria-label="tabs example">
@@ -41,6 +40,7 @@ export function Skills({ data }: SkillsProps) {
             <TabsContent key={item.title} value={`${item.title}`}>
               <h2>{item.title}</h2>
               <ReactMarkdown>{item.body}</ReactMarkdown>
+              {/* <p>{item.body}</p> */}
             </TabsContent>
           );
         })}

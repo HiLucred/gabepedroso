@@ -3,7 +3,7 @@ import { styled } from "@/styles";
 export const SwipeBox = styled("div", {
   width: "100%",
   maxWidth: "48rem",
-  margin: "3.8rem auto 0.875rem auto",
+  margin: "0 auto 0.875rem auto",
 
   display: "flex",
   alignItems: "center",
@@ -27,7 +27,6 @@ export const Container = styled("section", {
   width: "100%",
   maxWidth: "48rem",
   margin: "0 auto",
-
   display: "flex",
 });
 
@@ -38,8 +37,9 @@ export const Project = styled("div", {
 });
 
 export const Info = styled("div", {
+  boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.1)",
+
   maxWidth: 375,
-  height: "6.5rem",
   padding: "1rem",
   position: "relative",
   borderRadius: 11,
@@ -61,6 +61,7 @@ export const Info = styled("div", {
     color: "$secondary",
     fontSize: "1rem",
     fontWeight: 400,
+    marginBottom: "1.5rem",
   },
 
   "@media (max-width: 600px)": {
@@ -86,20 +87,5 @@ export const Links = styled("span", {
       color: "$pink",
       transition: "0.2s",
     },
-  },
-});
-
-export const TechnologysBox = styled("div", {
-  width: "100%",
-  marginTop: "0.700rem",
-
-  display: "flex",
-  gap: "0.5rem",
-  flexWrap: "wrap",
-
-  span: {
-    color: "$link",
-    fontSize: "0.875rem",
-    fontWeight: 400,
   },
 });

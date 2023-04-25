@@ -3,6 +3,7 @@ import { Button, Container, ErrorMessage, InputBox } from "./styles";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
+import { SectionTitle } from "../SectionTitle";
 
 const contactFormSchema = z.object({
   name: z.string().min(3, { message: "Insira um nome valido." }),
@@ -39,47 +40,52 @@ export function Contact() {
   }
 
   return (
-    <Container id="contact">
-      <h2>Vamos conversar?</h2>
-      <p>
-        Desenvolvedor web à disposição! Entre em contato para discutir seu
-        projeto ou tirar suas dúvidas. Aguardo sua mensagem!
-      </p>
+    <>
+      <SectionTitle>CONTATO</SectionTitle>
+      <Container id="contact">
+        <h2>Vamos conversar?</h2>
+        <p>
+          Desenvolvedor web à disposição! Entre em contato para discutir seu
+          projeto ou tirar suas dúvidas. Aguardo sua mensagem!
+        </p>
 
-      <InputBox onSubmit={handleSubmit(handleSubmitContactForm)}>
-        <label>
-          <span>Nome</span>
-          <input
-            type="text"
-            placeholder="digite seu nome"
-            {...register("name")}
-          />
-        </label>
-        <ErrorMessage>{errors.name && errors.name.message}</ErrorMessage>
+        <InputBox onSubmit={handleSubmit(handleSubmitContactForm)}>
+          <label>
+            <span>Nome</span>
+            <input
+              type="text"
+              placeholder="digite seu nome"
+              {...register("name")}
+            />
+          </label>
+          <ErrorMessage>{errors.name && errors.name.message}</ErrorMessage>
 
-        <label>
-          <span>E-mail</span>
-          <input
-            type="email"
-            placeholder="digite seu e-mail"
-            {...register("email")}
-          />
-        </label>
-        <ErrorMessage>{errors.email && errors.email.message}</ErrorMessage>
+          <label>
+            <span>E-mail</span>
+            <input
+              type="email"
+              placeholder="digite seu e-mail"
+              {...register("email")}
+            />
+          </label>
+          <ErrorMessage>{errors.email && errors.email.message}</ErrorMessage>
 
-        <label>
-          <span>Mensagem</span>
-          <textarea
-            placeholder="digite sua mensagem"
-            {...register("message")}
-          ></textarea>
-        </label>
-        <ErrorMessage>{errors.message && errors.message.message}</ErrorMessage>
+          <label>
+            <span>Mensagem</span>
+            <textarea
+              placeholder="digite sua mensagem"
+              {...register("message")}
+            ></textarea>
+          </label>
+          <ErrorMessage>
+            {errors.message && errors.message.message}
+          </ErrorMessage>
 
-        <Button type="submit" disabled={isSubmitting}>
-          enviar
-        </Button>
-      </InputBox>
-    </Container>
+          <Button type="submit" disabled={isSubmitting}>
+            enviar
+          </Button>
+        </InputBox>
+      </Container>
+    </>
   );
 }

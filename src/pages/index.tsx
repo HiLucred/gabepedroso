@@ -9,9 +9,9 @@ import { gitHub } from "@/lib/axios";
 import { Content } from "@/styles/pages/home/styles";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import Head from "next/head";
 
 export interface IUser {
   name: string;

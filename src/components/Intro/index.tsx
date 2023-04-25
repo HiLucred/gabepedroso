@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container, Links } from "./styles";
+import { Avatar, Container, Links } from "./styles";
 import Link from "next/link";
 import {
   InstagramLogoIcon,
@@ -18,7 +18,8 @@ interface IntroProps {
 export function Intro({ data }: IntroProps) {
   return (
     <Container>
-      <Image src={data.avatar_url} alt={""} width={156} height={156} />
+      <Avatar src={data.avatar_url} alt={""} width={156} height={156} />
+      {/* <Image src={data.avatar_url} alt={""} width={156} height={156} /> */}
       <h1>{data.name}</h1>
       <p>{data.bio}</p>
 

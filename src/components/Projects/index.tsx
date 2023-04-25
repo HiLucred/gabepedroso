@@ -7,14 +7,8 @@ import {
   GitHubLogoIcon,
   Link2Icon,
 } from "@radix-ui/react-icons";
-import {
-  Container,
-  Info,
-  Links,
-  Project,
-  SwipeBox,
-  TechnologysBox,
-} from "./styles";
+import { Container, Info, Links, Project, SwipeBox } from "./styles";
+import { SectionTitle } from "../SectionTitle";
 
 interface ProjectsProps {
   data: {
@@ -30,7 +24,7 @@ export function Projects({ data }: ProjectsProps) {
   const [ref] = useKeenSlider<HTMLDivElement>({
     slides: {
       perView: 2,
-      spacing: 6,
+      spacing: 10,
     },
 
     breakpoints: {
@@ -55,6 +49,8 @@ export function Projects({ data }: ProjectsProps) {
 
   return (
     <>
+      <SectionTitle id="projects">PROJETOS</SectionTitle>
+
       <SwipeBox>
         <span>deslize para o lado</span>
         <i>
@@ -62,7 +58,7 @@ export function Projects({ data }: ProjectsProps) {
         </i>
       </SwipeBox>
 
-      <Container id="projects" ref={ref} className="keen-slider">
+      <Container ref={ref} className="keen-slider">
         {projects.map((item) => {
           if (item.topics.length === 0) {
             return;
@@ -70,13 +66,6 @@ export function Projects({ data }: ProjectsProps) {
 
           return (
             <Project className="keen-slider__slide" key={item.name}>
-              <Image
-                src={`https://raw.githubusercontent.com/hilucred/${item.name}/main/public/cover.png`}
-                alt=""
-                width={375}
-                height={243}
-              />
-
               <Info>
                 <Links>
                   <Link
@@ -104,13 +93,13 @@ export function Projects({ data }: ProjectsProps) {
                     ? `${item.description.substring(0, 90)}...`
                     : item.description}
                 </p>
+                <Image
+                  src={`https://raw.githubusercontent.com/hilucred/${item.name}/main/public/cover.png`}
+                  alt=""
+                  width={340}
+                  height={220}
+                />
               </Info>
-
-              <TechnologysBox>
-                {item.topics.map((topic) => {
-                  return <span key={topic}>{topic}</span>;
-                })}
-              </TechnologysBox>
             </Project>
           );
         })}

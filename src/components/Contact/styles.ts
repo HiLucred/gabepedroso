@@ -2,11 +2,12 @@ import { styled } from "@/styles";
 
 export const Container = styled("section", {
   width: "98%",
-  marginTop: "6.5rem",
+  // marginTop: "6.5rem",
   marginBottom: "3rem",
   backgroundColor: "$tertiary",
   borderRadius: 11,
   padding: "4.75rem 3.5rem",
+  boxShadow: "2px 2px 2px 1px rgba(0, 0, 0, 0.1)",
 
   h2: {
     fontSize: "1rem",

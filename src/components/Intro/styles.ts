@@ -1,4 +1,5 @@
 import { styled } from "@/styles";
+import Image from "next/image";
 
 export const Container = styled("header", {
   maxWidth: "16.75rem",
@@ -10,11 +11,6 @@ export const Container = styled("header", {
   alignItems: "center",
   justifyContent: "center",
 
-  img: {
-    borderRadius: 999999,
-    marginBottom: "1.125rem",
-  },
-
   h1: {
     color: "$primary",
     fontWeight: 700,
@@ -25,6 +21,12 @@ export const Container = styled("header", {
     fontWeight: 400,
     textAlign: "center",
   },
+});
+
+export const Avatar = styled(Image, {
+  borderRadius: 999999,
+  marginBottom: "1.125rem",
+  
 });
 
 export const Links = styled("div", {

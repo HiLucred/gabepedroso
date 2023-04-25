@@ -6,9 +6,9 @@ export const Container = styled("div", {
     border: "none",
     cursor: "pointer",
 
-    '&:hover': {
-      opacity: 0.8
-    }
+    "&:hover": {
+      opacity: 0.8,
+    },
   },
 });
 
@@ -26,7 +26,7 @@ export const HamburgerMenu = styled("nav", {
   zIndex: 300,
 
   borderBottom: "5px solid #1C1C1C",
-  backgroundColor: "$background",
+  backgroundColor: "$tertiary",
 });
 
 export const Menu = styled("nav", {
