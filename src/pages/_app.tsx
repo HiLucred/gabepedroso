@@ -1,6 +1,7 @@
 import { globalStyles } from "@/styles/global";
 import type { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
+import { Analytics } from '@vercel/analytics/react';
 
 globalStyles();
 
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
