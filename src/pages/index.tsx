@@ -77,7 +77,6 @@ export default function Home({ user, projects, issues }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const username = "hilucred";
-
   const user = await gitHub.get(`/users/${username}`);
   const projects = await gitHub.get(`/users/${username}/repos`);
   const issues = await gitHub.get(`repos/${username}/gabepedroso/issues`);
